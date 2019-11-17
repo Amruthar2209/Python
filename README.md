@@ -1,3 +1,27 @@
 # Python
 
 Link  https://amruthar2209.github.io/Python/
+
+<html>
+  <head>
+    <title>Flask Intro - login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please login</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Text" name="text" value="{{
+          request.form.text }}">
+         <input type="pass" placeholder="Pass" name="pass" value="{{
+          request.form.pass }}">
+        <input class="btn btn-default" type="submit" value="Submit">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
